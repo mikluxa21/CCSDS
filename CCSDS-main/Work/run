@@ -1,0 +1,11 @@
+#!/bin/bash
+if [-d "build"]; then
+rm -rf build
+fi
+
+cmake -Bbuild
+cmake --build build
+cd build/tests
+./Test
+cd -
+rm -rf build
